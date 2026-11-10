@@ -1,0 +1,119 @@
+.body{
+    margin: 0px;
+    align-items: ce;
+}
+
+.pagina{
+    display: flex;
+    justify-content: center;
+}
+.infoLibro{
+    margin-top: 40px;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+
+    padding: 5px;
+    
+    background-color: #0C7076;;
+
+    display: flex;
+
+    width: 750px;
+}
+
+.imagen{
+    margin-left: 10px;
+    padding: 15px;
+    border-style: solid;
+    border-color: #0F9690;
+    border-radius: 20px;
+    background-color: #0F9690;
+}
+
+.zonaventa{
+    padding-left: 25px;
+}
+
+.titulo{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+}
+
+.stock{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+.precio{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+
+.precioanterior{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: line-through;
+    font-size: 30px;
+}
+
+.preciooferta{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+
+.divspb{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sinstock{
+    border: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #af2300ce;
+    border-color: #680000be;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    width: 150px;
+}
+
+.zonabotones{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botonventa{
+    width: 150px;
+    height: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    border-radius: 5px;
+    background-color: #0F9690;
+    border-color: #05161A;
+}
+
+.descripcion{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 1%;
+
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    border-radius: 15px;
+
+    margin-top: 2%;
+    margin-left: 20%;
+
+    background-color: #0F9690;
+}
+
+.pdescripcion{
+    font-size: large;
+}

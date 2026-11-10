@@ -1,0 +1,120 @@
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0C7076;
+    border-color: #0C7076;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+.barraBusqueda {
+    display: flex;
+    align-items: center;
+}
+
+.barraimput {
+    width: 350px;
+    height: 33px;
+    box-sizing: border-box;
+
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    text-indent: 10px;
+}
+
+.botonbusqueda {
+    height: 33px;
+    width: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    cursor: pointer;
+}
+
+.imagenbusqueda {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.zonalogin{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-right: 20px solid transparent;
+}
+
+.botonIngresar{
+    padding: 12px 20px;
+    background-color: #294D61;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.menu-usuario {
+    position: relative;
+    display: inline-block;
+}
+
+/* Botón que despliega el menú */
+.menu-usuario summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    color: white;
+    background-color: #294D61;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Quitar la flecha predeterminada */
+.menu-usuario summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Contenedor de las opciones */
+.contenido-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+
+    min-width: 200px;
+    background-color: #072E33;
+
+    border-top: 4px solid #0F9690;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+
+    z-index: 100;
+}
+
+/* Enlaces */
+.contenido-menu a {
+    display: block;
+    padding: 14px 20px;
+
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efecto al pasar el mouse */
+.contenido-menu a:hover {
+    background-color: #0C7076;
+}

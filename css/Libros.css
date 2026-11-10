@@ -1,0 +1,102 @@
+.bodycss{
+    margin: 0px;
+    background-image: url('/Pictures/FondoLibreria2.jpg');
+}
+
+.bordecategoria {
+    border: 3px solid #05161A;
+    border-radius: 20px;
+    background-color: #294D61;
+    padding: 20px;
+    margin: 75px;
+}
+
+.lista-libros{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 20px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    padding: 10px 5px 20px;
+}
+
+/* Tamaño de la barra */
+.lista-libros::-webkit-scrollbar {
+    height: 12px;
+}
+
+/* Fondo por donde se desplaza */
+.lista-libros::-webkit-scrollbar-track {
+    background-color: #072E33;
+    border-radius: 10px;
+}
+
+/* Parte que arrastrás */
+.lista-libros::-webkit-scrollbar-thumb {
+    background-color: #0F9690;
+    border-radius: 10px;
+    border: 2px solid #072E33;
+}
+
+/* Al pasar el mouse */
+.lista-libros::-webkit-scrollbar-thumb:hover {
+    background-color: #294D61;
+}
+
+
+.divlibro {
+    flex: 0 0 190px;
+    height: 370px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px;
+    background-color: #D4E4E7;
+    border: 2px solid #05161A;
+    border-radius: 10px;
+}
+
+.divlibro a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.titulos{
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: initial;
+}
+
+.tituloslibros{
+    margin-top: 5px;
+    color: black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 3em;
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    text-overflow: ellipsis;
+}
+
+.precio{
+    color: black;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

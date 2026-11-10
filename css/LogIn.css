@@ -1,0 +1,60 @@
+.body{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+.CentroLogin{
+    background-color: #0F9690;
+
+    width: 400px;
+    height: 450px;
+
+    border-color: #05161A;
+    border-width: 3px;
+    border-radius: 15px;
+    border-style:groove;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.error{
+    height: 40px;
+
+    border-width: 3px;
+    border-style: groove;
+    border-radius: 10px;
+    
+    background-color: rgba(219, 0, 0, 0.432);
+    border-color: rgba(119, 0, 0, 0.521);
+}
+
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imputs{
+    height: 35px;
+    width: 250px;
+    
+    border-radius: 10px;
+
+    text-size-adjust: inherit;
+}
+
+.botones{
+    height: 25px;
+    width: 150px;
+    
+    border-radius: 7px;
+
+    margin: 3px
+}
