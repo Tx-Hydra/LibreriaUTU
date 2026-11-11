@@ -1,4 +1,5 @@
 <?php
+
 require_once __DIR__ . '/Config/Sesion.php';
 Sesion::iniciar();
 
@@ -22,6 +23,7 @@ require_once __DIR__ . '/Controls/'.$clase.'.php';
 try{
     
     $controlador = new $clase();
+
     if(!method_exists($controlador,$accion)){
         http_response_code(404);
         exit('Accion no Encontrada: '. htmlspecialchars($accion));

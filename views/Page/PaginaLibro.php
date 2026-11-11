@@ -27,12 +27,12 @@
                         <?php endif; ?>
                         <div class="zonabotones">
                             <?php  if ($libro->getstock() > 0): ?>
-                                <button class="botonventa"> Comprar </button>
+                                <a class="botonventa"> Comprar </a>
                             <?php else: ?>
                                 <h3 class="sinstock">Sin Stock</h3>
                             <?php endif; ?>
                             <?php  if (Sesion::usuario()['rol'] == 'Bibliotecario'): ?>
-                                <button class="botonventa" method="POST" action="/index.php?controlador=libros&accion=modificarlibro" ><a href="index.php?controlador=libros&accion=editar&id= <?= $libro->getid() ?>"> Editar Libro </a> </button>
+                                <a class="botonventa" href="index.php?controlador=libros&accion=modificarlibro&id=<?= $libro->getid() ?>">Editar Libro</a>
                             <?php endif; ?>
                         </div>
                     </div>

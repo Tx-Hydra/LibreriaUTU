@@ -59,11 +59,7 @@ class RepositorioLibros {
             'autor'       => 'autor ASC',
             default       => 'id DESC'
         };
-        $stmt = $this->libros->prepare(
-            "SELECT * FROM libro
-            WHERE titulo LIKE ? OR autor LIKE ?
-            ORDER BY $ordenSQL"
-        );
+        $stmt = $this->libros->prepare("SELECT * FROM libro WHERE titulo LIKE ? OR autor LIKE ? ORDER BY $ordenSQL");
         $texto = "%" . $busqueda . "%";
         $stmt->execute([$texto, $texto]);
         $libros = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -72,6 +68,10 @@ class RepositorioLibros {
             $resultados[] = $this->aObjeto($libro);
         }
         return $resultados;
+    }
+
+    public function editar(){
+        
     }
 
     private function aObjeto($lib){

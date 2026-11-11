@@ -85,7 +85,43 @@ class LibrosController{
             http_response_code(404);
             exit('No Se Encontro El Libro');
         }
-        require_once __DIR__ . '/../views/Page/EditarLibro.php';
+        require_once __DIR__ . '/../views/Page/modificarlibro.php';
     }
 
-} 
+    public function enviarModificacion(){
+        Sesion::requerirSesion();
+        $id = $_GET['id'];
+        $libro = $this->SolicitudLibro->buscar($id);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+            try{
+                $titulo = trim($_POST['nombre'] ?? '') !== '' ? $_POST['nombre'] : $libro->gettitulo();
+                $autor = trim($_POST['autor'] ?? '') !== '' ? $_POST['autor'] : $libro->getautor();
+                $anio = ($_POST['anio'] ?? '') !== '' ? (int)$_POST['anio'] : $libro->getAnio(); 
+                $portada = ($_POST['portada'] ?? '') !== '' ? (int)$_POST['portada'] : "LibrosImagenes/".$libro->getportada(); 
+                $stock = ($_POST['Stock'] ?? '') !== ''? (int)$_POST['Stock'] : $libro->getStock();
+                $isbn = ($_POST['isbn'] ?? '') !== ''? (int)$_POST['isbn'] : $libro->getisbn();
+                $precio = ($_POST['precio'] ?? '') !== '' ? (float)$_POST['precio'] : $libro->getPrecio();
+                $preciooferta =  ($_POST['preciooferta'] ?? '') !== '' ? (float)$_POST['preciooferta'] : $libro->getPreciooferta();
+                $codigobarras = ($_POST['codigobarras'] ?? '') !== '' ? (float)$_POST['codigobarras'] : $libro->getcodbarras();
+                $descripcion = ($_POST['descripcion'] ?? '') !== '' ? (float)$_POST['descripcion'] : $libro->getdescripcion();
+                $activo = ($_POST['activo'] ?? '') !== '' ? (float)$_POST['activo'] : $libro->getactivo();
+                $formatofisico = ($_POST['formato_fisico'] ?? '') !== '' ? (float)$_POST['formato_fisico'] : $libro->getformatofisico();
+                $formatodigital = ($_POST['formato_digital'] ?? '') !== '' ? (float)$_POST['formato_digital'] : $libro->getformatodigital();
+                $archivodigital = ($_POST['archivo_digital'] ?? '') !== '' ? (float)$_POST['archivo_digital'] : $libro->getarchivodigital();
+
+                $libromodificado = new Libros($titulo,$autor,$anio,$portada,$stock,$isbn,$precio,$preciooferta,$codigobarras,$descripcion,$activo,$formatofisico,$formatodigital,$archivodigital);
+                $respuesta = $this->SolicitudLibro->editar($libromodificado,$id);
+                if($respuesta){
+                    header("Location: index.php/controlador=libros?accion=DetalleLibro&id=".$id);
+                    exit;
+                }
+            }
+            catch(Exception $error){
+                $mensaje = "Error: ". $error->getMessage();
+                header("Location: index.php/controlador=libros?accion=DetalleLibro&id=".$id);
+                    exit;
+            }
+        }
+    } 
+
+}
